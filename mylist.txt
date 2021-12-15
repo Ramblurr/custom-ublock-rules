@@ -1,0 +1,11 @@
+! hide w3schools from google search results
+*://w3schools.com/*
+google.*##.g:has(a[href*="w3schools.com"])
+
+! hide tutorialspoint.com from google search results
+*://tutorialspoint.com/*
+google.*##.g:has(a[href*="tutorialspoint.com"])
+
+! Hide the 'People also search for' slide-in box when going back on Google Search.
+! We require the other attributes here to reduce the risk of false positives.
+google.*#$#div[id^=eob_][jscontroller][jsdata][jsaction][data-ved] { display: none !important; }
